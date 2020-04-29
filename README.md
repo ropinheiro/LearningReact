@@ -6,7 +6,7 @@ Each folder in the root is a distinct learning project.
 
 ## Hello World
 
-**Folder:** ~/HelloWorld
+**Folder:** ~/hello-world
 
 **Based on:** https://reactjs.org/docs/hello-world.html
 
@@ -14,7 +14,7 @@ Each folder in the root is a distinct learning project.
 
 ## Tic Tac Toe
 
-**Folder:** ~/TicTacToe
+**Folder:** ~/tic-tac-toe
 
 **Based on:** https://reactjs.org/tutorial/tutorial.html
 
