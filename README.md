@@ -18,7 +18,8 @@ Each folder in the root is a distinct learning project.
 
 **Based on:** https://reactjs.org/docs/hello-world.html
 
-**Status:** TODO.
+**Status:** Paused.
+
 ## Learn React Router
 
 **Folder:** ~/learn-react-router
@@ -33,5 +34,4 @@ Each folder in the root is a distinct learning project.
 
 **Based on:** https://reactjs.org/tutorial/tutorial.html
 
-**Status:** currently learning.
-
+**Status:** DONE.
