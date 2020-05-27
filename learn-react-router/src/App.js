@@ -70,13 +70,16 @@ function Topics () {
           <Link to={`${url}/components`}>Components</Link>
         </li>
         <li>
-          <Link to={`${url}/props-v-state`}>Props v. State</Link>
+          <Link to={`${url}/sub-topics`}>Sub-Topics example</Link>
         </li>
       </ul>
 
       <Switch>
         <Route exact path={path}>
           <h3>Please select a topic.</h3>
+        </Route>
+        <Route path={`${path}/sub-topics`}>
+          <SubTopics />
         </Route>
         <Route path={`${path}/:topicId`}>
           <Topic />
@@ -96,6 +99,50 @@ function Topic () {
   return (
     <div>
       <h3>{topicId}</h3>
+    </div>
+  )
+}
+
+function SubTopics () {
+  // The `path` lets us build <Route> paths that are
+  // relative to the parent route, while the `url` lets
+  // us build relative links.
+  let { path, url } = useRouteMatch()
+
+  return (
+    <div>
+      <h2>Sub-Topics</h2>
+      <ul>
+        <li>
+          <Link to={`${url}/sub-topic-1`}>First Sub-Topic</Link>
+        </li>
+        <li>
+          <Link to={`${url}/sub-topic-2`}>Second Sub-Topic</Link>
+        </li>
+      </ul>
+
+      <Switch>
+        <Route exact path={path}>
+          <h3>Please select a sub-topic.</h3>
+        </Route>
+        <Route path={`${path}/:subTopicId`}>
+          <SubTopic />
+        </Route>
+      </Switch>
+    </div>
+  )
+}
+
+function SubTopic () {
+  // The <Route> that rendered this component has a
+  // path of `/topics/subtopics/:subTopicId`. The `:subTopicId` portion
+  // of the URL indicates a placeholder that we can
+  // get from `useParams()`.
+  let { subTopicId } = useParams()
+
+  return (
+    <div>
+      <h3>{subTopicId}</h3>
     </div>
   )
 }
