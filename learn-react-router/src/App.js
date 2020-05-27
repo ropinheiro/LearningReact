@@ -4,11 +4,20 @@ import {
   Switch,
   Route,
   Link,
-  useRouteMatch,
-  useParams
+  useParams,
+  useRouteMatch
 } from 'react-router-dom'
 
-export default function App () {
+// Since routes are regular React components, they
+// may be rendered anywhere in the app, including in
+// child elements.
+//
+// This helps when it's time to code-split your app
+// into multiple bundles because code-splitting a
+// React Router app is the same as code-splitting
+// any other React app.
+
+export default function NestingExample () {
   return (
     <Router>
       <div>
@@ -17,22 +26,18 @@ export default function App () {
             <Link to='/'>Home</Link>
           </li>
           <li>
-            <Link to='/about'>About</Link>
-          </li>
-          <li>
             <Link to='/topics'>Topics</Link>
           </li>
         </ul>
 
+        <hr />
+
         <Switch>
-          <Route path='/about'>
-            <About />
+          <Route exact path='/'>
+            <Home />
           </Route>
           <Route path='/topics'>
             <Topics />
-          </Route>
-          <Route path='/'>
-            <Home />
           </Route>
         </Switch>
       </div>
@@ -41,39 +46,40 @@ export default function App () {
 }
 
 function Home () {
-  return <h2>Home</h2>
-}
-
-function About () {
-  return <h2>About</h2>
+  return (
+    <div>
+      <h2>Home</h2>
+    </div>
+  )
 }
 
 function Topics () {
-  let match = useRouteMatch()
+  // The `path` lets us build <Route> paths that are
+  // relative to the parent route, while the `url` lets
+  // us build relative links.
+  let { path, url } = useRouteMatch()
 
   return (
     <div>
       <h2>Topics</h2>
-
       <ul>
         <li>
-          <Link to={`${match.url}/components`}>Components</Link>
+          <Link to={`${url}/rendering`}>Rendering with React</Link>
         </li>
         <li>
-          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
+          <Link to={`${url}/components`}>Components</Link>
+        </li>
+        <li>
+          <Link to={`${url}/props-v-state`}>Props v. State</Link>
         </li>
       </ul>
 
-      {/* The Topics page has its own <Switch> with more routes
-          that build on the /topics URL path. You can think of the
-          2nd <Route> here as an "index" page for all topics, or
-          the page that is shown when no topic is selected */}
       <Switch>
-        <Route path={`${match.path}/:topicId`}>
-          <Topic />
-        </Route>
-        <Route path={match.path}>
+        <Route exact path={path}>
           <h3>Please select a topic.</h3>
+        </Route>
+        <Route path={`${path}/:topicId`}>
+          <Topic />
         </Route>
       </Switch>
     </div>
@@ -81,6 +87,15 @@ function Topics () {
 }
 
 function Topic () {
+  // The <Route> that rendered this component has a
+  // path of `/topics/:topicId`. The `:topicId` portion
+  // of the URL indicates a placeholder that we can
+  // get from `useParams()`.
   let { topicId } = useParams()
-  return <h3>Requested topic ID: {topicId}</h3>
+
+  return (
+    <div>
+      <h3>{topicId}</h3>
+    </div>
+  )
 }
