@@ -20,13 +20,21 @@ Each folder in the root is a distinct learning project.
 
 **Status:** Paused.
 
+## Learn React Redux
+
+**Folder:** ~/learn-react-redux
+
+**Based on:** I don't remember :( Maybe Pluralsight?
+
+**Status:** Paused.
+
 ## Learn React Router
 
 **Folder:** ~/learn-react-router
 
 **Based on:** https://reacttraining.com/react-router/web/guides/quick-start
 
-**Status:** currently learning.
+**Status:** Paused.
 
 ## Tic Tac Toe
 
