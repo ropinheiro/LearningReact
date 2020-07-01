@@ -12,6 +12,14 @@ Each folder in the root is a distinct learning project.
 
 **Status:** Paused.
 
+## Chart Libs Compare
+
+**Folder:** ~/chart-libs-compare
+
+**Based on:** none, just a quick comparison of different chart libraries.
+
+**Status:** In Progress.
+
 ## Hello World
 
 **Folder:** ~/hello-world
