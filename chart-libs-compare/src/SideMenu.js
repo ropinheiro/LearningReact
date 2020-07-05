@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
-import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 
+import DemoTemplate from './demos/demo-template'
 import DemoRecharts from './demos/demo-recharts'
 
 function TabPanel (props) {
@@ -19,11 +19,7 @@ function TabPanel (props) {
       aria-labelledby={`vertical-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box p={3}>{children}</Box>}
     </div>
   )
 }
@@ -62,8 +58,8 @@ export default function SideMenu () {
 
   const demosList = [
     { key: 0, label: 'Recharts', contents: <DemoRecharts /> },
-    { key: 1, label: 'Demo #2', contents: 'Demo #2' },
-    { key: 2, label: 'Demo #3', contents: 'Demo #3' }
+    { key: 1, label: 'Demo #2', contents: <DemoTemplate /> },
+    { key: 2, label: 'Demo #3', contents: <DemoTemplate /> }
   ]
 
   return (

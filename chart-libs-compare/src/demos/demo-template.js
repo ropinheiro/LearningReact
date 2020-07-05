@@ -2,7 +2,7 @@ import React from 'react'
 
 import ChartsGrid from './charts-grid'
 
-export default function DemoRecharts () {
+export default function DemoTemplate () {
   const demosList = [
     { key: 0, label: 'Line Chart', contents: <DemoLineChart /> },
     { key: 1, label: 'Stacked Area Chart', contents: <DemoStackedAreaChart /> },
@@ -11,7 +11,7 @@ export default function DemoRecharts () {
     { key: 4, label: 'Gantt Chart', contents: <DemoGanttChart /> }
   ]
 
-  return <ChartsGrid title='Recharts Demo' demosList={demosList} />
+  return <ChartsGrid title='Some Charts Library Demo' demosList={demosList} />
 }
 
 function DemoDefault () {
