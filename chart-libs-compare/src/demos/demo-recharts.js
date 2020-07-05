@@ -1,13 +1,14 @@
 import React, { PureComponent } from 'react'
 import {
-  Label,
-  LineChart,
+  Area,
+  AreaChart,
   Line,
+  LineChart,
   CartesianGrid,
-  XAxis,
-  YAxis,
+  ReferenceArea,
   Tooltip,
-  ReferenceArea
+  XAxis,
+  YAxis
 } from 'recharts'
 
 import ChartsGrid from './charts-grid'
@@ -28,7 +29,7 @@ function DemoDefault () {
   return <p>TODO: chart here</p>
 }
 
-const data = [
+const dataDemoLineChart = [
   { name: 1, cost: 4.11, impression: 100 },
   { name: 2, cost: 2.39, impression: 120 },
   { name: 3, cost: 1.37, impression: 150 },
@@ -51,8 +52,8 @@ const data = [
   { name: 20, cost: 7, impression: 100 }
 ]
 
-const getAxisYDomain = (from, to, ref, offset) => {
-  const refData = data.slice(from - 1, to)
+const getAxisYDomainDemoLineChart = (from, to, ref, offset) => {
+  const refData = dataDemoLineChart.slice(from - 1, to)
   let [bottom, top] = [refData[0][ref], refData[0][ref]]
   refData.forEach(d => {
     if (d[ref] > top) top = d[ref]
@@ -62,8 +63,8 @@ const getAxisYDomain = (from, to, ref, offset) => {
   return [(bottom | 0) - offset, (top | 0) + offset]
 }
 
-const initialState = {
-  data,
+const initialStateDemoLineChart = {
+  dataDemoLineChart,
   left: 'dataMin',
   right: 'dataMax',
   refAreaLeft: '',
@@ -78,11 +79,11 @@ const initialState = {
 class DemoLineChart extends PureComponent {
   constructor (props) {
     super(props)
-    this.state = initialState
+    this.state = initialStateDemoLineChart
   }
 
   zoom () {
-    let { refAreaLeft, refAreaRight, data } = this.state
+    let { refAreaLeft, refAreaRight, dataDemoLineChart } = this.state
 
     if (refAreaLeft === refAreaRight || refAreaRight === '') {
       this.setState(() => ({
@@ -97,8 +98,13 @@ class DemoLineChart extends PureComponent {
       [refAreaLeft, refAreaRight] = [refAreaRight, refAreaLeft]
 
     // yAxis domain
-    const [bottom, top] = getAxisYDomain(refAreaLeft, refAreaRight, 'cost', 1)
-    const [bottom2, top2] = getAxisYDomain(
+    const [bottom, top] = getAxisYDomainDemoLineChart(
+      refAreaLeft,
+      refAreaRight,
+      'cost',
+      1
+    )
+    const [bottom2, top2] = getAxisYDomainDemoLineChart(
       refAreaLeft,
       refAreaRight,
       'impression',
@@ -108,7 +114,7 @@ class DemoLineChart extends PureComponent {
     this.setState(() => ({
       refAreaLeft: '',
       refAreaRight: '',
-      data: data.slice(),
+      data: dataDemoLineChart.slice(),
       left: refAreaLeft,
       right: refAreaRight,
       bottom,
@@ -119,9 +125,9 @@ class DemoLineChart extends PureComponent {
   }
 
   zoomOut () {
-    const { data } = this.state
+    const { dataDemoLineChart } = this.state
     this.setState(() => ({
-      data: data.slice(),
+      data: dataDemoLineChart.slice(),
       refAreaLeft: '',
       refAreaRight: '',
       left: 'dataMin',
@@ -135,8 +141,7 @@ class DemoLineChart extends PureComponent {
 
   render () {
     const {
-      data,
-      barIndex,
+      dataDemoLineChart,
       left,
       right,
       refAreaLeft,
@@ -160,7 +165,7 @@ class DemoLineChart extends PureComponent {
         <LineChart
           width={570}
           height={285}
-          data={data}
+          data={dataDemoLineChart}
           onMouseDown={e => this.setState({ refAreaLeft: e.activeLabel })}
           onMouseMove={e =>
             this.state.refAreaLeft &&
@@ -218,8 +223,93 @@ class DemoLineChart extends PureComponent {
   }
 }
 
-function DemoStackedAreaChart () {
-  return <DemoDefault />
+const dataDemoStackedAreaChart = [
+  {
+    name: 'Page A',
+    uv: 4000,
+    pv: 2400,
+    amt: 2400
+  },
+  {
+    name: 'Page B',
+    uv: 3000,
+    pv: 1398,
+    amt: 2210
+  },
+  {
+    name: 'Page C',
+    uv: 2000,
+    pv: 9800,
+    amt: 2290
+  },
+  {
+    name: 'Page D',
+    uv: 2780,
+    pv: 3908,
+    amt: 2000
+  },
+  {
+    name: 'Page E',
+    uv: 1890,
+    pv: 4800,
+    amt: 2181
+  },
+  {
+    name: 'Page F',
+    uv: 2390,
+    pv: 3800,
+    amt: 2500
+  },
+  {
+    name: 'Page G',
+    uv: 3490,
+    pv: 4300,
+    amt: 2100
+  }
+]
+
+class DemoStackedAreaChart extends PureComponent {
+  render () {
+    return (
+      <AreaChart
+        width={570}
+        height={309}
+        data={dataDemoStackedAreaChart}
+        margin={{
+          top: 10,
+          right: 30,
+          left: 0,
+          bottom: 0
+        }}
+      >
+        <CartesianGrid strokeDasharray='3 3' />
+        <XAxis dataKey='name' />
+        <YAxis />
+        <Tooltip />
+        <Area
+          type='monotone'
+          dataKey='uv'
+          stackId='1'
+          stroke='#8884d8'
+          fill='#8884d8'
+        />
+        <Area
+          type='monotone'
+          dataKey='pv'
+          stackId='1'
+          stroke='#82ca9d'
+          fill='#82ca9d'
+        />
+        <Area
+          type='monotone'
+          dataKey='amt'
+          stackId='1'
+          stroke='#ffc658'
+          fill='#ffc658'
+        />
+      </AreaChart>
+    )
+  }
 }
 
 function DemoPieChart () {
