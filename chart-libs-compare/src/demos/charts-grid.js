@@ -33,7 +33,7 @@ export default function ChartsGrid (props) {
       <Grid container spacing={3}>
         {demosList.map(demo => {
           return (
-            <Grid key={demo.key} item xs={4}>
+            <Grid key={demo.key} item xs={6}>
               <ChartTitle title={demo.label} />
               <Paper className={classes.paper}>{demo.contents}</Paper>
             </Grid>
