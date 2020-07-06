@@ -5,12 +5,8 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Box from '@material-ui/core/Box'
 
-import DemoTemplate from './demos/demo-template'
-import DemoRecharts from './demos/demo-recharts'
-
 function TabPanel (props) {
   const { children, value, index, ...other } = props
-
   return (
     <div
       role='tabpanel'
@@ -48,19 +44,14 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function SideMenu () {
+export default function SideMenu (props) {
+  const { demosList } = props
   const classes = useStyles()
   const [value, setValue] = React.useState(0)
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
   }
-
-  const demosList = [
-    { key: 0, label: 'Recharts', contents: <DemoRecharts /> },
-    { key: 1, label: 'Demo #2', contents: <DemoTemplate /> },
-    { key: 2, label: 'Demo #3', contents: <DemoTemplate /> }
-  ]
 
   return (
     <div className={classes.root}>
