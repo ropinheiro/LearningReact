@@ -35,10 +35,6 @@ export default function DemoRecharts () {
   return <ChartsGrid title='Recharts Demo' demosList={demosList} />
 }
 
-function DemoDefault () {
-  return <p>TODO: chart here</p>
-}
-
 // ============================================================================
 // Line Chart
 // ============================================================================
@@ -457,5 +453,5 @@ class DemoBulletChart extends PureComponent {
 // ============================================================================
 
 function DemoGanttChart () {
-  return <DemoDefault />
+  return <p>Nothing available...</p>
 }
