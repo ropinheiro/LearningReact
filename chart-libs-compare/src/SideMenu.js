@@ -40,8 +40,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex'
   },
   tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
-    width: '300px'
+    borderRight: `1px solid ${theme.palette.divider}`
   }
 }))
 

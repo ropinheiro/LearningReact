@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
-import Paper from '@material-ui/core/Paper'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 
@@ -11,12 +10,8 @@ const useStyles = makeStyles(theme => ({
     gridTemplateColumns: 'repeat(12, 1fr)',
     gridGap: theme.spacing(3)
   },
-  paper: {
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    whiteSpace: 'nowrap',
-    marginBottom: theme.spacing(1)
+  chartContainer: {
+    width: '1000px'
   },
   divider: {
     margin: theme.spacing(2, 0)
@@ -30,12 +25,12 @@ export default function ChartsGrid (props) {
     <div>
       <PageTitle title={title} />
       <Divider className={classes.divider} />
-      <Grid container spacing={3}>
+      <Grid container spacing={3} className={classes.chartContainer}>
         {demosList.map(demo => {
           return (
-            <Grid key={demo.key} item xs={6}>
+            <Grid key={demo.key} item>
               <ChartTitle title={demo.label} />
-              <Paper className={classes.paper}>{demo.contents}</Paper>
+              {demo.contents}
             </Grid>
           )
         })}
@@ -55,5 +50,9 @@ function PageTitle (props) {
 
 function ChartTitle (props) {
   const { title } = props
-  return <Typography variant='h6'>{title}</Typography>
+  return (
+    <center>
+      <Typography variant='h6'>{title}</Typography>
+    </center>
+  )
 }

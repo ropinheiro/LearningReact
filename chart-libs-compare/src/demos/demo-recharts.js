@@ -173,8 +173,8 @@ class DemoLineChart extends PureComponent {
         </button>
 
         <LineChart
-          width={570}
-          height={285}
+          width={500}
+          height={250}
           data={dataDemoLineChart}
           onMouseDown={e => this.setState({ refAreaLeft: e.activeLabel })}
           onMouseMove={e =>
@@ -286,8 +286,8 @@ class DemoStackedAreaChart extends PureComponent {
   render () {
     return (
       <AreaChart
-        width={570}
-        height={309}
+        width={450}
+        height={310}
         data={dataDemoStackedAreaChart}
         margin={{
           top: 10,
