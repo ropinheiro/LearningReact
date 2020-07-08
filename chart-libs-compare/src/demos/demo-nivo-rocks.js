@@ -2,6 +2,7 @@ import React from 'react'
 
 import ChartsGrid from './charts-grid'
 
+import { ResponsiveBullet } from '@nivo/bullet'
 import { ResponsiveLine } from '@nivo/line'
 
 import { makeStyles } from '@material-ui/core/styles'
@@ -426,10 +427,59 @@ function DemoPieChart () {
 // Bullet Chart
 // ============================================================================
 
+const dataDemoBulletChart = [
+  {
+    id: 'temp.',
+    ranges: [26, 49, 66, 0, 120],
+    measures: [96],
+    markers: [79]
+  },
+  {
+    id: 'power',
+    ranges: [
+      0.5674877215956196,
+      0.06402239260206047,
+      0.08151998481530676,
+      0,
+      2
+    ],
+    measures: [1.000463342442467, 1.5614103119480536],
+    markers: [1.9371675998896394]
+  },
+  {
+    id: 'volume',
+    ranges: [15, 18, 6, 28, 9, 19, 0, 40],
+    measures: [39],
+    markers: [34]
+  },
+  {
+    id: 'cost',
+    ranges: [451427, 32554, 444884, 0, 500000],
+    measures: [79480, 326074],
+    markers: [391800]
+  },
+  {
+    id: 'revenue',
+    ranges: [4, 1, 10, 0, 11],
+    measures: [2],
+    markers: [9.714053638034118, 8.651059127167567]
+  }
+]
+
 function DemoBulletChart () {
   return (
     <NivoWrapper>
-      <DemoDefault />
+      <ResponsiveBullet
+        data={dataDemoBulletChart}
+        margin={{ top: 50, right: 90, bottom: 50, left: 90 }}
+        spacing={46}
+        titleAlign='start'
+        titleOffsetX={-70}
+        measureSize={0.2}
+        animate={true}
+        motionStiffness={90}
+        motionDamping={12}
+      />
     </NivoWrapper>
   )
 }
