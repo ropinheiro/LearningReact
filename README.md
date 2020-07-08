@@ -18,7 +18,7 @@ Each folder in the root is a distinct learning project.
 
 **Based on:** none, just a quick comparison of different chart libraries.
 
-**Status:** In Progress.
+**Status:** DONE.
 
 ## Hello World
 
@@ -43,6 +43,14 @@ Each folder in the root is a distinct learning project.
 **Based on:** https://reacttraining.com/react-router/web/guides/quick-start
 
 **Status:** Paused.
+
+## Redux Saga Beginner Tutorial
+
+**Folder:** ~/redux-saga-beginner-tutorial
+
+**Based on:** https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html
+
+**Status:** In Progress.
 
 ## Tic Tac Toe
 
