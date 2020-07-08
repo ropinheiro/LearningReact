@@ -3,6 +3,7 @@ import React from 'react'
 import ChartsGrid from './charts-grid'
 
 import { ResponsiveBullet } from '@nivo/bullet'
+import { linearGradientDef } from '@nivo/core'
 import { ResponsiveLine } from '@nivo/line'
 import { ResponsivePie } from '@nivo/pie'
 
@@ -22,21 +23,17 @@ const useStyles = makeStyles(theme => ({
 export default function DemoNivoRocks () {
   const demosList = [
     { key: 0, label: 'Line Chart', contents: <DemoLineChart /> },
-    { key: 1, label: 'Stacked Area Chart', contents: <DemoStackedAreaChart /> },
+    {
+      key: 1,
+      label: 'Stacked Area Chart (reality: Line Chart with gradient)',
+      contents: <DemoStackedAreaChart />
+    },
     { key: 2, label: 'Pie Chart', contents: <DemoPieChart /> },
     { key: 3, label: 'Bullet Chart', contents: <DemoBulletChart /> },
     { key: 4, label: 'Gantt Chart', contents: <DemoGanttChart /> }
   ]
 
   return <ChartsGrid title='Nivo Rocks Demo' demosList={demosList} />
-}
-
-// ============================================================================
-// REMOVE THIS AT THE END
-// ============================================================================
-
-function DemoDefault () {
-  return <p>TODO: chart here</p>
 }
 
 // Nivo Rocks has something I see as a cons. The chart components need the
@@ -407,7 +404,80 @@ function DemoLineChart () {
 function DemoStackedAreaChart () {
   return (
     <NivoWrapper>
-      <DemoDefault />
+      <ResponsiveLine
+        data={dataDemoLineChart}
+        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        xScale={{ type: 'point' }}
+        yScale={{
+          type: 'linear',
+          min: 'auto',
+          max: 'auto',
+          stacked: true,
+          reverse: false
+        }}
+        axisTop={null}
+        axisRight={null}
+        axisBottom={{
+          orient: 'bottom',
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legend: 'transportation',
+          legendOffset: 36,
+          legendPosition: 'middle'
+        }}
+        axisLeft={{
+          orient: 'left',
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legend: 'count',
+          legendOffset: -40,
+          legendPosition: 'middle'
+        }}
+        colors={{ scheme: 'nivo' }}
+        pointSize={10}
+        pointColor={{ theme: 'background' }}
+        pointBorderWidth={2}
+        pointBorderColor={{ from: 'serieColor' }}
+        pointLabel='y'
+        pointLabelYOffset={-12}
+        useMesh={true}
+        legends={[
+          {
+            anchor: 'bottom-right',
+            direction: 'column',
+            justify: false,
+            translateX: 100,
+            translateY: 0,
+            itemsSpacing: 0,
+            itemDirection: 'left-to-right',
+            itemWidth: 80,
+            itemHeight: 20,
+            itemOpacity: 0.75,
+            symbolSize: 12,
+            symbolShape: 'circle',
+            symbolBorderColor: 'rgba(0, 0, 0, .5)',
+            effects: [
+              {
+                on: 'hover',
+                style: {
+                  itemBackground: 'rgba(0, 0, 0, .03)',
+                  itemOpacity: 1
+                }
+              }
+            ]
+          }
+        ]}
+        enableArea={true}
+        defs={[
+          linearGradientDef('gradientA', [
+            { offset: 0, color: 'inherit' },
+            { offset: 100, color: 'inherit', opacity: 0 }
+          ])
+        ]}
+        fill={[{ match: '*', id: 'gradientA' }]}
+      />
     </NivoWrapper>
   )
 }
