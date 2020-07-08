@@ -1,0 +1,447 @@
+import React from 'react'
+
+import ChartsGrid from './charts-grid'
+
+import { ResponsiveLine } from '@nivo/line'
+
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles(theme => ({
+  nivoWrapper: {
+    width: '800px',
+    height: '500px'
+  }
+}))
+
+// ============================================================================
+// COPY THIS FILE TO ADD A NEW LIBRARY
+// ============================================================================
+
+export default function DemoNivoRocks () {
+  const demosList = [
+    { key: 0, label: 'Line Chart', contents: <DemoLineChart /> },
+    { key: 1, label: 'Stacked Area Chart', contents: <DemoStackedAreaChart /> },
+    { key: 2, label: 'Pie Chart', contents: <DemoPieChart /> },
+    { key: 3, label: 'Bullet Chart', contents: <DemoBulletChart /> },
+    { key: 4, label: 'Gantt Chart', contents: <DemoGanttChart /> }
+  ]
+
+  return <ChartsGrid title='Some Charts Library Demo' demosList={demosList} />
+}
+
+// ============================================================================
+// REMOVE THIS AT THE END
+// ============================================================================
+
+function DemoDefault () {
+  return <p>TODO: chart here</p>
+}
+
+// Nivo Rocks has something I see as a cons. The chart components need the
+// parent container to have a defined height when using responsive component,
+// otherwise height will be 0 and no chart will be rendered. IMO, the charts
+// should be shelf contained and receive properties to work properly no matter
+// how the parent is configured.
+function NivoWrapper (props) {
+  const { children } = props
+  const classes = useStyles()
+  return <div className={classes.nivoWrapper}>{children}</div>
+}
+
+// ============================================================================
+// Pie Chart
+// ============================================================================
+
+const dataDemoLineChart = [
+  {
+    id: 'japan',
+    color: 'hsl(109, 70%, 50%)',
+    data: [
+      {
+        x: 'plane',
+        y: 86
+      },
+      {
+        x: 'helicopter',
+        y: 285
+      },
+      {
+        x: 'boat',
+        y: 7
+      },
+      {
+        x: 'train',
+        y: 15
+      },
+      {
+        x: 'subway',
+        y: 230
+      },
+      {
+        x: 'bus',
+        y: 30
+      },
+      {
+        x: 'car',
+        y: 255
+      },
+      {
+        x: 'moto',
+        y: 268
+      },
+      {
+        x: 'bicycle',
+        y: 152
+      },
+      {
+        x: 'horse',
+        y: 148
+      },
+      {
+        x: 'skateboard',
+        y: 47
+      },
+      {
+        x: 'others',
+        y: 33
+      }
+    ]
+  },
+  {
+    id: 'france',
+    color: 'hsl(201, 70%, 50%)',
+    data: [
+      {
+        x: 'plane',
+        y: 76
+      },
+      {
+        x: 'helicopter',
+        y: 203
+      },
+      {
+        x: 'boat',
+        y: 256
+      },
+      {
+        x: 'train',
+        y: 52
+      },
+      {
+        x: 'subway',
+        y: 233
+      },
+      {
+        x: 'bus',
+        y: 262
+      },
+      {
+        x: 'car',
+        y: 36
+      },
+      {
+        x: 'moto',
+        y: 198
+      },
+      {
+        x: 'bicycle',
+        y: 114
+      },
+      {
+        x: 'horse',
+        y: 97
+      },
+      {
+        x: 'skateboard',
+        y: 101
+      },
+      {
+        x: 'others',
+        y: 200
+      }
+    ]
+  },
+  {
+    id: 'us',
+    color: 'hsl(267, 70%, 50%)',
+    data: [
+      {
+        x: 'plane',
+        y: 52
+      },
+      {
+        x: 'helicopter',
+        y: 49
+      },
+      {
+        x: 'boat',
+        y: 231
+      },
+      {
+        x: 'train',
+        y: 127
+      },
+      {
+        x: 'subway',
+        y: 217
+      },
+      {
+        x: 'bus',
+        y: 94
+      },
+      {
+        x: 'car',
+        y: 190
+      },
+      {
+        x: 'moto',
+        y: 71
+      },
+      {
+        x: 'bicycle',
+        y: 251
+      },
+      {
+        x: 'horse',
+        y: 163
+      },
+      {
+        x: 'skateboard',
+        y: 274
+      },
+      {
+        x: 'others',
+        y: 127
+      }
+    ]
+  },
+  {
+    id: 'germany',
+    color: 'hsl(270, 70%, 50%)',
+    data: [
+      {
+        x: 'plane',
+        y: 226
+      },
+      {
+        x: 'helicopter',
+        y: 225
+      },
+      {
+        x: 'boat',
+        y: 170
+      },
+      {
+        x: 'train',
+        y: 253
+      },
+      {
+        x: 'subway',
+        y: 220
+      },
+      {
+        x: 'bus',
+        y: 247
+      },
+      {
+        x: 'car',
+        y: 61
+      },
+      {
+        x: 'moto',
+        y: 143
+      },
+      {
+        x: 'bicycle',
+        y: 6
+      },
+      {
+        x: 'horse',
+        y: 37
+      },
+      {
+        x: 'skateboard',
+        y: 220
+      },
+      {
+        x: 'others',
+        y: 259
+      }
+    ]
+  },
+  {
+    id: 'norway',
+    color: 'hsl(295, 70%, 50%)',
+    data: [
+      {
+        x: 'plane',
+        y: 57
+      },
+      {
+        x: 'helicopter',
+        y: 48
+      },
+      {
+        x: 'boat',
+        y: 185
+      },
+      {
+        x: 'train',
+        y: 102
+      },
+      {
+        x: 'subway',
+        y: 270
+      },
+      {
+        x: 'bus',
+        y: 123
+      },
+      {
+        x: 'car',
+        y: 125
+      },
+      {
+        x: 'moto',
+        y: 186
+      },
+      {
+        x: 'bicycle',
+        y: 68
+      },
+      {
+        x: 'horse',
+        y: 199
+      },
+      {
+        x: 'skateboard',
+        y: 66
+      },
+      {
+        x: 'others',
+        y: 118
+      }
+    ]
+  }
+]
+
+function DemoLineChart () {
+  return (
+    <NivoWrapper>
+      <ResponsiveLine
+        data={dataDemoLineChart}
+        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        xScale={{ type: 'point' }}
+        yScale={{
+          type: 'linear',
+          min: 'auto',
+          max: 'auto',
+          stacked: true,
+          reverse: false
+        }}
+        axisTop={null}
+        axisRight={null}
+        axisBottom={{
+          orient: 'bottom',
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legend: 'transportation',
+          legendOffset: 36,
+          legendPosition: 'middle'
+        }}
+        axisLeft={{
+          orient: 'left',
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legend: 'count',
+          legendOffset: -40,
+          legendPosition: 'middle'
+        }}
+        colors={{ scheme: 'nivo' }}
+        pointSize={10}
+        pointColor={{ theme: 'background' }}
+        pointBorderWidth={2}
+        pointBorderColor={{ from: 'serieColor' }}
+        pointLabel='y'
+        pointLabelYOffset={-12}
+        useMesh={true}
+        legends={[
+          {
+            anchor: 'bottom-right',
+            direction: 'column',
+            justify: false,
+            translateX: 100,
+            translateY: 0,
+            itemsSpacing: 0,
+            itemDirection: 'left-to-right',
+            itemWidth: 80,
+            itemHeight: 20,
+            itemOpacity: 0.75,
+            symbolSize: 12,
+            symbolShape: 'circle',
+            symbolBorderColor: 'rgba(0, 0, 0, .5)',
+            effects: [
+              {
+                on: 'hover',
+                style: {
+                  itemBackground: 'rgba(0, 0, 0, .03)',
+                  itemOpacity: 1
+                }
+              }
+            ]
+          }
+        ]}
+      />
+    </NivoWrapper>
+  )
+}
+
+// ============================================================================
+// Stacked Area Chart
+// ============================================================================
+
+function DemoStackedAreaChart () {
+  return (
+    <NivoWrapper>
+      <DemoDefault />
+    </NivoWrapper>
+  )
+}
+
+// ============================================================================
+// Pie Chart
+// ============================================================================
+
+function DemoPieChart () {
+  return (
+    <NivoWrapper>
+      <DemoDefault />
+    </NivoWrapper>
+  )
+}
+
+// ============================================================================
+// Bullet Chart
+// ============================================================================
+
+function DemoBulletChart () {
+  return (
+    <NivoWrapper>
+      <DemoDefault />
+    </NivoWrapper>
+  )
+}
+
+// ============================================================================
+// Gantt Chart
+// ============================================================================
+
+function DemoGanttChart () {
+  return (
+    <NivoWrapper>
+      <DemoDefault />
+    </NivoWrapper>
+  )
+}
