@@ -21,7 +21,7 @@ export default function DemoReactGoogleCharts () {
     { key: 4, label: 'Gantt Chart', contents: <DemoGanttChart /> }
   ]
 
-  return <ChartsGrid title='Some Charts Library Demo' demosList={demosList} />
+  return <ChartsGrid title='React Google Charts Demo' demosList={demosList} />
 }
 
 // ============================================================================

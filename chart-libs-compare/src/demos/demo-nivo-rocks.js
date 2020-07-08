@@ -27,7 +27,7 @@ export default function DemoNivoRocks () {
     { key: 4, label: 'Gantt Chart', contents: <DemoGanttChart /> }
   ]
 
-  return <ChartsGrid title='Some Charts Library Demo' demosList={demosList} />
+  return <ChartsGrid title='Nivo Rocks Demo' demosList={demosList} />
 }
 
 // ============================================================================
