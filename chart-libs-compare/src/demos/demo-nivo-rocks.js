@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 // ============================================================================
-// COPY THIS FILE TO ADD A NEW LIBRARY
+// Chart list definition
 // ============================================================================
 
 export default function DemoNivoRocks () {

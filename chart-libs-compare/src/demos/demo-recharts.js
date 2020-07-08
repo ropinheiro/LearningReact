@@ -19,6 +19,10 @@ import {
 
 import ChartsGrid from './charts-grid'
 
+// ============================================================================
+// Chart list definition
+// ============================================================================
+
 export default function DemoRecharts () {
   const demosList = [
     { key: 0, label: 'Line Chart', contents: <DemoLineChart /> },

@@ -5,7 +5,7 @@ import ChartsGrid from './charts-grid'
 import { Chart } from 'react-google-charts'
 
 // ============================================================================
-// COPY THIS FILE TO ADD A NEW LIBRARY
+// Chart list definition
 // ============================================================================
 
 export default function DemoReactGoogleCharts () {
@@ -23,10 +23,6 @@ export default function DemoReactGoogleCharts () {
 
   return <ChartsGrid title='React Google Charts Demo' demosList={demosList} />
 }
-
-// ============================================================================
-// REMOVE THIS AT THE END
-// ============================================================================
 
 // ============================================================================
 // Pie Chart
