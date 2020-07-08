@@ -635,9 +635,5 @@ function DemoBulletChart () {
 // ============================================================================
 
 function DemoGanttChart () {
-  return (
-    <NivoWrapper>
-      <DemoDefault />
-    </NivoWrapper>
-  )
+  return <NivoWrapper>Nothing available...</NivoWrapper>
 }
