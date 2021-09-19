@@ -546,6 +546,15 @@
     "@babel/helper-plugin-utils" "^7.10.4"
     "@babel/plugin-syntax-optional-catch-binding" "^7.8.0"
 
+"@babel/plugin-proposal-optional-chaining@7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.12.1.tgz#cce122203fc8a32794296fc377c6dedaf4363797"
+  integrity sha512-c2uRpY6WzaVDzynVY9liyykS+kVU+WRZPMPYpkelXH8KBt1oXoI89kPbZKKG/jDT5UK92FTW2fZkZaJhdiBabw==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.10.4"
+    "@babel/helper-skip-transparent-expression-wrappers" "^7.12.1"
+    "@babel/plugin-syntax-optional-chaining" "^7.8.0"
+
 "@babel/plugin-proposal-optional-chaining@^7.12.1", "@babel/plugin-proposal-optional-chaining@^7.12.7":
   version "7.12.7"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.12.7.tgz#e02f0ea1b5dc59d401ec16fb824679f683d3303c"
@@ -2677,6 +2686,7 @@ async-each@^1.0.1:
 async-limiter@~1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.1.tgz#dd379e94f0db8310b08291f9d64c3209766617fd"
+  integrity sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==
 
 async@^2.6.2:
   version "2.6.3"
@@ -3656,17 +3666,6 @@ cosmiconfig@^6.0.0:
     parse-json "^5.0.0"
     path-type "^4.0.0"
     yaml "^1.7.2"
-
-cosmiconfig@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-7.0.0.tgz#ef9b44d773959cae63ddecd122de23853b60f8d3"
-  integrity sha512-pondGvTuVYDk++upghXJabWzL6Kxu6f26ljFw64Swq9v6sQPUL3EUlVDV56diOjpCayKihL6hVe8exIACU4XcA==
-  dependencies:
-    "@types/parse-json" "^4.0.0"
-    import-fresh "^3.2.1"
-    parse-json "^5.0.0"
-    path-type "^4.0.0"
-    yaml "^1.10.0"
 
 cosmiconfig@^7.0.0:
   version "7.0.0"
@@ -6939,14 +6938,6 @@ memory-fs@^0.5.0:
     errno "^0.1.3"
     readable-stream "^2.0.1"
 
-merge-deep@^3.0.2:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.3.tgz#1a2b2ae926da8b2ae93a0ac15d90cd1922766003"
-  dependencies:
-    arr-union "^3.1.0"
-    clone-deep "^0.2.4"
-    kind-of "^3.0.2"
-
 merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
@@ -10204,7 +10195,7 @@ tryer@^1.0.1:
   resolved "https://registry.yarnpkg.com/tryer/-/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
   integrity sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==
 
-ts-pnp@1.2.0:
+ts-pnp@1.2.0, ts-pnp@^1.1.6:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
@@ -10939,8 +10930,9 @@ write-file-atomic@^3.0.0:
     typedarray-to-buffer "^3.1.5"
 
 ws@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.1.tgz#442fdf0a47ed64f59b6a5d8ff130f4748ed524fb"
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.2.tgz#dd5cdbd57a9979916097652d78f1cc5faea0c32e"
+  integrity sha512-zmhltoSR8u1cnDsD43TX59mzoMZsLKqUweyYBAIvTngR3shc0W6aOZylZmq/7hqyVxPdi+5Ud2QInblgyE72fw==
   dependencies:
     async-limiter "~1.0.0"
 
