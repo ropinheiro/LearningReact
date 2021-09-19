@@ -12,11 +12,27 @@ Each folder in the root is a distinct learning project.
 
 **Status:** Paused.
 
+## Chart Libs Compare
+
+**Folder:** ~/chart-libs-compare
+
+**Based on:** none, just a quick comparison of different chart libraries.
+
+**Status:** DONE.
+
 ## Hello World
 
 **Folder:** ~/hello-world
 
 **Based on:** https://reactjs.org/docs/hello-world.html
+
+**Status:** Paused.
+
+## Learn React Redux
+
+**Folder:** ~/learn-react-redux
+
+**Based on:** I don't remember :( Maybe Pluralsight?
 
 **Status:** Paused.
 
@@ -26,7 +42,15 @@ Each folder in the root is a distinct learning project.
 
 **Based on:** https://reacttraining.com/react-router/web/guides/quick-start
 
-**Status:** currently learning.
+**Status:** Paused.
+
+## Redux Saga Beginner Tutorial
+
+**Folder:** ~/redux-saga-beginner-tutorial
+
+**Based on:** https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html
+
+**Status:** In Progress.
 
 ## Tic Tac Toe
 
