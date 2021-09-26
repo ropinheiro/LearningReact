@@ -17,7 +17,7 @@
     "@atlaskit/button": "^9.0.7",
     "@atlaskit/css-reset": "^3.0.1",
     "@atlaskit/dropdown-menu": "^6.1.10",
-    "@atlaskit/flag": "^9.0.7",
+    "@atlaskit/flag": "^9.1.10",
     "@atlaskit/icon": "^13.4.0",
     "@atlaskit/inline-edit": "^7.0.7",
     "@atlaskit/modal-dialog": "^6.0.10",

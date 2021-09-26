@@ -24,7 +24,7 @@
     babel-runtime "^6.26.0"
     prop-types "^15.5.10"
 
-"@atlaskit/analytics-next@^4.0.0":
+"@atlaskit/analytics@^4.0.5":
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-4.0.5.tgz#ec92c74a1f283ecf334dc2ea568e73dd29346939"
   integrity sha512-IqbKUQugMArrHZcCbm3MM9udbYGOzwE2D4vmiE1E/3waMDP+WybUi/5dwGcGY3FcVkW5/x2Mitt357K4ZOL8Dw==
@@ -190,14 +190,17 @@
     "@atlaskit/theme" "^6.0.1"
     babel-runtime "^6.26.0"
 
-"@atlaskit/flag@^9.0.7":
-  version "9.0.7"
-  resolved "https://registry.yarnpkg.com/@atlaskit/flag/-/flag-9.0.7.tgz#5fb0b502be389fd82108ecb68a4b13fb2ce6a13c"
+"@atlaskit/flag@^9.1.10":
+  version "9.1.10"
+  resolved "https://registry.yarnpkg.com/@atlaskit/flag/-/flag-9.1.10.tgz#df60a7f14ff37ac82712e7f5dfe0e8eecb78c3a0"
+  integrity sha512-T2TNSvkMoGllj9jShWnP21gsMJCLjkh7pjEvoPnjTG49JX1M1HTimPkitHbIj9KE37btVILMgquYNe7LwyD5kA==
   dependencies:
-    "@atlaskit/analytics-next" "^3.0.6"
-    "@atlaskit/icon" "^13.3.1"
-    "@atlaskit/portal" "^0.0.6"
-    "@atlaskit/theme" "^6.0.1"
+    "@atlaskit/analytics-next" "^3.1.2"
+    "@atlaskit/button" "^10.1.2"
+    "@atlaskit/icon" "^16.0.0"
+    "@atlaskit/portal" "^0.1.0"
+    "@atlaskit/theme" "^7.0.1"
+    "@babel/runtime" "^7.0.0"
     babel-runtime "^6.26.0"
     react-transition-group "^2.2.1"
     uuid "^3.1.0"
@@ -434,18 +437,6 @@
     exenv "^1.2.2"
     prop-types "^15.5.10"
 
-"@atlaskit/tooltip@^12.0.10":
-  version "12.0.11"
-  resolved "https://registry.yarnpkg.com/@atlaskit/tooltip/-/tooltip-12.0.11.tgz#d62d2c59645d88e9ace3dbda04dde2ff495f656b"
-  dependencies:
-    "@atlaskit/analytics-next" "^3.0.6"
-    "@atlaskit/portal" "^0.0.6"
-    "@atlaskit/theme" "^6.0.1"
-    babel-runtime "^6.26.0"
-    flushable "^1.0.0"
-    react-node-resolver "^1.0.1"
-    react-transition-group "^2.2.1"
-
 "@atlaskit/tooltip@^12.1.15":
   version "12.1.17"
   resolved "https://registry.yarnpkg.com/@atlaskit/tooltip/-/tooltip-12.1.17.tgz#9fcccc78a4157d474d53bfcf390447b8a09c12e2"
@@ -588,6 +579,13 @@
   version "7.11.5"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.11.5.tgz#c7ff6303df71080ec7a4f5b8c003c58f1cf51037"
   integrity sha512-X9rD8qqm695vgmeaQ4fvz/o3+Wk4ZzQvSHkDBgpYKxpD4qTAUm88ZKtHkVqIOsYFFbIQ6wQYhC6q7pjqVK0E0Q==
+
+"@babel/runtime@^7.0.0":
+  version "7.9.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
+  integrity sha512-64AF1xY3OAkFHqOb9s4jpgk1Mm5vDZ4L3acHvAml+53nO1XbXLuDodsVpO4OIUsmemlUHMxNdYMNJmsvOwLrvQ==
+  dependencies:
+    regenerator-runtime "^0.13.4"
 
 "@babel/runtime@^7.0.0":
   version "7.9.6"
