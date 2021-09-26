@@ -9,12 +9,6 @@
   dependencies:
     "@atlaskit/type-helpers" "^2.1.0"
 
-"@atlaskit/analytics-next@^3.0.6":
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-3.0.6.tgz#8be37c5147513d7f6ef534e85d1949fa5e9758fe"
-  dependencies:
-    prop-types "^15.5.10"
-
 "@atlaskit/analytics-next@^4.0.0":
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-4.0.5.tgz#ec92c74a1f283ecf334dc2ea568e73dd29346939"
@@ -39,7 +33,7 @@
     "@atlaskit/theme" "^6.0.1"
     "@atlaskit/tooltip" "^12.0.10"
 
-"@atlaskit/avatar@^14.1.8":
+"@atlaskit/avatar@^14.1.9":
   version "14.1.9"
   resolved "https://registry.yarnpkg.com/@atlaskit/avatar/-/avatar-14.1.9.tgz#9ced3c42f83ade335b39ae8ee6fe32c376492502"
   integrity sha512-ZA10z/eLWWbn+7qp5C500wVLt4cuWKVA/IwUTwfD1w8M19nCFz5VbDYHGM0lnr78qOXXvov/RqqK5ZBtWQ9iNQ==
@@ -58,13 +52,6 @@
     "@atlaskit/analytics-next" "^3.1.2"
     "@atlaskit/theme" "^7.0.1"
     "@babel/runtime" "^7.0.0"
-
-"@atlaskit/blanket@^7.0.6":
-  version "7.0.6"
-  resolved "https://registry.yarnpkg.com/@atlaskit/blanket/-/blanket-7.0.6.tgz#11feb1ea83d85170c4903974c7e891f5d96bd21c"
-  dependencies:
-    "@atlaskit/analytics-next" "^3.0.6"
-    "@atlaskit/theme" "^6.0.1"
 
 "@atlaskit/button@^10.1.2":
   version "10.1.3"
@@ -334,13 +321,6 @@
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-"@atlaskit/popper@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@atlaskit/popper/-/popper-0.2.1.tgz#9e2e56e9dfb56941ea1f503c2e178ca1822a3914"
-  dependencies:
-    memoize-one "^3.0.1"
-    react-popper "^1.0.0"
-
 "@atlaskit/popper@^0.3.6":
   version "0.3.7"
   resolved "https://registry.yarnpkg.com/@atlaskit/popper/-/popper-0.3.7.tgz#0dbf6528294b5907789addf9024543622bc8699a"
@@ -432,12 +412,6 @@
   resolved "https://registry.yarnpkg.com/@atlaskit/util-shared-styles/-/util-shared-styles-2.10.8.tgz#07fb6903cb749575c36a1d7e25f4638bbcf866f7"
   dependencies:
     babel-runtime "^6.11.6"
-
-"@babel/code-frame@7.0.0-beta.51":
-  version "7.0.0-beta.51"
-  resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0-beta.51.tgz#bd71d9b192af978df915829d39d4094456439a0c"
-  dependencies:
-    "@babel/highlight" "7.0.0-beta.51"
 
 "@babel/code-frame@^7.10.4":
   version "7.10.4"
@@ -548,6 +522,13 @@
   version "7.11.5"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.11.5.tgz#c7ff6303df71080ec7a4f5b8c003c58f1cf51037"
   integrity sha512-X9rD8qqm695vgmeaQ4fvz/o3+Wk4ZzQvSHkDBgpYKxpD4qTAUm88ZKtHkVqIOsYFFbIQ6wQYhC6q7pjqVK0E0Q==
+
+"@babel/runtime@^7.0.0":
+  version "7.9.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
+  integrity sha512-64AF1xY3OAkFHqOb9s4jpgk1Mm5vDZ4L3acHvAml+53nO1XbXLuDodsVpO4OIUsmemlUHMxNdYMNJmsvOwLrvQ==
+  dependencies:
+    regenerator-runtime "^0.13.4"
 
 "@babel/runtime@^7.0.0":
   version "7.9.6"

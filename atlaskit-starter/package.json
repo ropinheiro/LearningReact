@@ -13,7 +13,7 @@
   "author": "Atlassian",
   "license": "ISC",
   "dependencies": {
-    "@atlaskit/avatar": "^14.0.9",
+    "@atlaskit/avatar": "^14.1.9",
     "@atlaskit/button": "^9.0.7",
     "@atlaskit/css-reset": "^3.0.1",
     "@atlaskit/dropdown-menu": "^6.1.26",
