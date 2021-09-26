@@ -1767,6 +1767,11 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@snyk/protect@^1.720.0":
+  version "1.720.0"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.720.0.tgz#8a32dd57d84ef628c78dd7a2fbe2440b432ed4af"
+  integrity sha512-6PfU2ziqhsi3SRYaRW6gGKYMolIoOrnOgVusSBFkcvpZxSShtMiuIi+pAa3PA9D9gE2BMnF3noWZsQjQXvmTPQ==
+
 "@surma/rollup-plugin-off-main-thread@^1.1.1":
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-1.4.1.tgz#bf1343e5a926e5a1da55e3affd761dda4ce143ef"
@@ -1827,7 +1832,7 @@
     "@svgr/babel-plugin-svg-dynamic-title" "^5.4.0"
     "@svgr/babel-plugin-svg-em-dimensions" "^5.4.0"
     "@svgr/babel-plugin-transform-react-native-svg" "^5.4.0"
-    "@svgr/babel-plugin-transform-svg-component" "^5.4.0"
+    "@svgr/babel-plugin-transform-svg-component" "^5.5.0"
 
 "@svgr/core@^5.4.0":
   version "5.5.0"
@@ -2951,6 +2956,7 @@ babel-preset-current-node-syntax@^1.0.0:
     "@babel/plugin-syntax-object-rest-spread" "^7.8.3"
     "@babel/plugin-syntax-optional-catch-binding" "^7.8.3"
     "@babel/plugin-syntax-optional-chaining" "^7.8.3"
+    "@babel/plugin-syntax-top-level-await" "^7.8.3"
 
 babel-preset-jest@^26.6.2:
   version "26.6.2"
@@ -6348,9 +6354,9 @@ jest-cli@^26.6.0:
     graceful-fs "^4.2.4"
     import-local "^3.0.2"
     is-ci "^2.0.0"
-    jest-config "^26.6.1"
-    jest-util "^26.6.1"
-    jest-validate "^26.6.1"
+    jest-config "^26.6.3"
+    jest-util "^26.6.2"
+    jest-validate "^26.6.2"
     prompts "^2.0.1"
     yargs "^15.4.1"
 
@@ -6535,6 +6541,7 @@ jest-message-util@^26.6.0, jest-message-util@^26.6.1, jest-message-util@^26.6.2:
     chalk "^4.0.0"
     graceful-fs "^4.2.4"
     micromatch "^4.0.2"
+    pretty-format "^26.6.2"
     slash "^3.0.0"
     stack-utils "^2.0.2"
 
@@ -6607,15 +6614,15 @@ jest-runner@^26.6.0, jest-runner@^26.6.3:
     emittery "^0.7.1"
     exit "^0.1.2"
     graceful-fs "^4.2.4"
-    jest-config "^26.6.1"
+    jest-config "^26.6.3"
     jest-docblock "^26.0.0"
-    jest-haste-map "^26.6.1"
-    jest-leak-detector "^26.6.1"
-    jest-message-util "^26.6.1"
-    jest-resolve "^26.6.1"
-    jest-runtime "^26.6.1"
-    jest-util "^26.6.1"
-    jest-worker "^26.6.1"
+    jest-haste-map "^26.6.2"
+    jest-leak-detector "^26.6.2"
+    jest-message-util "^26.6.2"
+    jest-resolve "^26.6.2"
+    jest-runtime "^26.6.3"
+    jest-util "^26.6.2"
+    jest-worker "^26.6.2"
     source-map-support "^0.5.6"
     throat "^5.0.0"
 
@@ -8912,7 +8919,6 @@ react-dev-utils@^11.0.0:
     globby "11.0.1"
     gzip-size "5.1.1"
     immer "7.0.9"
-    inquirer "7.3.3"
     is-root "2.1.0"
     loader-utils "2.0.0"
     open "^7.0.2"
