@@ -15,16 +15,7 @@
   dependencies:
     prop-types "^15.5.10"
 
-"@atlaskit/analytics-next@^3.1.2":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-3.2.1.tgz#c6c3bafc6d5a4160dd8d7fe4be5b50e2c079819d"
-  integrity sha512-NHhis0wkzBHPnZKewAfBS5p8khiXoVnOA+00iKh1Mo4EIiVdgc4VXeFp97nb4hhyFcBguCoY3Zs6V1kta48nnw==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    babel-runtime "^6.26.0"
-    prop-types "^15.5.10"
-
-"@atlaskit/analytics@^4.0.5":
+"@atlaskit/analytics-next@^4.0.0":
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-4.0.5.tgz#ec92c74a1f283ecf334dc2ea568e73dd29346939"
   integrity sha512-IqbKUQugMArrHZcCbm3MM9udbYGOzwE2D4vmiE1E/3waMDP+WybUi/5dwGcGY3FcVkW5/x2Mitt357K4ZOL8Dw==
@@ -359,13 +350,6 @@
     memoize-one "^3.0.1"
     react-popper "1.0.2"
 
-"@atlaskit/portal@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@atlaskit/portal/-/portal-0.0.6.tgz#354ef3b58fc0bd9062c90978821b6d1ffb6836b8"
-  dependencies:
-    babel-runtime "^6.26.0"
-    tiny-invariant "^0.0.3"
-
 "@atlaskit/portal@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@atlaskit/portal/-/portal-0.1.0.tgz#15b954582bf9646b4b9e7a9b8a478d9e3a3038a2"
@@ -412,21 +396,6 @@
     "@babel/runtime" "^7.0.0"
     babel-runtime "^6.26.0"
     react-transition-group "^2.2.1"
-
-"@atlaskit/theme@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-6.0.1.tgz#1fa4e1f46aebf815535a91eb01eefee175d5edb6"
-  dependencies:
-    prop-types "^15.5.10"
-
-"@atlaskit/theme@^7.0.1":
-  version "7.0.5"
-  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-7.0.5.tgz#fc8f8171a54101107224ca913190165e831b4bab"
-  integrity sha512-VU0Z1wlAeqxvy80QO4ehMdKIARK2WpLGaJkhrTNE1KiRHSS1SVO9oaM70uX30mD7MxzkYjVweJ5+dIgDRoL8JA==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    exenv "^1.2.2"
-    prop-types "^15.5.10"
 
 "@atlaskit/theme@^8.0.0", "@atlaskit/theme@^8.1.7":
   version "8.1.9"
@@ -579,6 +548,13 @@
   version "7.11.5"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.11.5.tgz#c7ff6303df71080ec7a4f5b8c003c58f1cf51037"
   integrity sha512-X9rD8qqm695vgmeaQ4fvz/o3+Wk4ZzQvSHkDBgpYKxpD4qTAUm88ZKtHkVqIOsYFFbIQ6wQYhC6q7pjqVK0E0Q==
+
+"@babel/runtime@^7.0.0":
+  version "7.9.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
+  integrity sha512-64AF1xY3OAkFHqOb9s4jpgk1Mm5vDZ4L3acHvAml+53nO1XbXLuDodsVpO4OIUsmemlUHMxNdYMNJmsvOwLrvQ==
+  dependencies:
+    regenerator-runtime "^0.13.4"
 
 "@babel/runtime@^7.0.0":
   version "7.9.6"
